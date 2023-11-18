@@ -1,76 +1,122 @@
 body{
     display: grid;
-    grid-template-columns: 15% auto auto auto;
-    grid-template-rows: auto;
-    grid-template-areas:
-        "header header header header"
-        "sidebar content content content"
-        "sidebar product1 product2 product3"
-        "sidebar product4 product5 product6"
-        "footer footer footer footer";
-    background-color: whitesmoke;
+    grid-template-columns: auto;
+    grid-template-areas: 
+    "header"
+    "searchBar"
+    "productos"
+    "paginador"
+    "footer";
     margin: 0;
     padding: 0;
-    height: 100vh;
+    font-family: "Open Sans", sans-serif;
+    min-height: 100vh;    
+}
+
+.bold{
+    font-weight: 700;
+    text-align: center;
 }
 
 
-.NavBar {
+nav{
     grid-area: header;
     text-align: center;
+    background-color:  #195B8D;
+    color: white;
+    font-size: 150%;
+    padding: 1%;
+    font-weight: 700;
+   
+}
+
+.searchBar{
+    grid-area: searchBar;
+    text-align: center;
+    background-color: whitesmoke;
+    color: #212431;
+    padding-bottom: 1%;
+    
+}
+
+
+.searchBlock{
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    margin-left:10%;
+    margin-right:10%;
+   padding-left: 1%;
+   padding-right: 1%;
+   justify-content: space-between;
+   align-items: center;
+   
+}
+
+aside{
+    grid-area: aside;
+    display: none;
+}
+
+
+.productos{
+    grid-area: productos;
+  padding-top: 1%;
+  padding-bottom: 1%;
+    justify-self: center;
+    
+}
+
+.producto {
+    display: flex;
+    flex-direction:column;
+    width: 80%;
+    max-width: 400px;
+    height: 400px;
     background-color: #195B8D;
     color: white;
-    padding: 1%;
-    font-size: 150%;
-}
-
-.AsideBar {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    margin-top: 2em;
-    margin-left: 2em;
-    grid-area: sidebar;
-}
-
-.Producto {
-    display: flex;
-    flex-direction: column;
-    width: 350px;
-    height: 400px;
-    background-color: white;
     text-align: center;
-    margin: 10%;
     align-items: center; 
     justify-content: center; 
-    border-radius: 50px
+    border-radius: 50px;
+    border: 1px solid #212431;
+    margin: 5%;
+
 }
 
-.Img {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 10%;
-    width: 300px;
+.img {
+    width:  80%; 
+    max-width: 300px; 
     height: auto;
+    border-radius: 5%;
 }
 
-.Comprar {
-    background-color: #195B8D;
-    color: white;
-    margin-top: 12%;
-    padding: 3%;
-    width: 95%;
+.paginador{
+    grid-area: paginador;
+    display: flex;
+    list-style: none;
+    padding: 0;
+    justify-content: center;
 }
 
-
-.Bold{
-    font-weight: bold;
-    font-size: 120%;
-
+.paginador li {
+    margin: 0 5px;
 }
 
-.Footer {
+.paginador a {
+    text-decoration: none;
+    padding: 8px 12px;
+    background-color: #f2f2f2;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.paginador a:hover {
+    background-color: #ddd;
+}
+
+footer {
     grid-area: footer;
     background-color: #195B8D;
     color: white;
@@ -78,3 +124,90 @@ body{
     padding: 1%;
     width: 100%;
 }
+
+.productos .producto:not(:first-child) {
+    display: none;
+}
+
+@media (min-width: 576px) {
+
+   body {
+    display: grid;
+    grid-template-columns: 15% auto auto auto;
+    grid-template-rows: auto auto auto auto auto auto;
+    grid-template-areas: 
+    "header header header header"
+    "searchBar searchBar searchBar searchBar"
+    "aside productos productos productos"
+    "aside productos productos productos"
+    "paginador paginador paginador paginador"
+    "footer footer footer footer" ;
+ 
+
+}
+
+aside{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-top: 2em;
+}
+
+.asideBar li {
+    margin-top: 10%;
+    margin-bottom: 30%;
+
+}
+
+.asideBar a {
+    text-decoration: none;
+    padding: 5%;
+    background-color: #f2f2f2;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+
+}
+
+.asideBar a:hover {
+    background-color: #ddd;
+}
+
+.productos .producto:not(:first-child) {
+    display: flex; 
+}
+
+
+.productos{
+    grid-area: productos;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+
+
+.producto{
+    grid-template-areas: producto;
+}
+
+.comprar {
+    padding: 4% 10%;
+    background-color: #f2f2f2;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+
+}
+
+.comprar:hover {
+    background-color: #ddd;
+}
+
+}
+
+
+
+ 
+
+
+
+
