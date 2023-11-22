@@ -3,6 +3,7 @@ body{
     grid-template-columns: auto;
     grid-template-areas: 
     "header"
+    "aside"
     "searchBar"
     "productos"
     "paginador"
@@ -36,6 +37,8 @@ nav{
     background-color: whitesmoke;
     color: #212431;
     padding-bottom: 1%;
+    padding: 5px; /* Ajusta el espacio interno según tus necesidades */
+ 
     
 }
 
@@ -46,8 +49,8 @@ nav{
     background-color: white;
     margin-left:10%;
     margin-right:10%;
-   padding-left: 1%;
-   padding-right: 1%;
+    padding-left: 1%;
+    padding-right: 1%;
    justify-content: space-between;
    align-items: center;
    
@@ -55,10 +58,33 @@ nav{
 
 aside{
     grid-area: aside;
-    display: none;
 }
 
+.asideBar {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 
+}
+
+.asideBar a {
+    text-decoration: none;
+    padding: 5%;
+    background-color: #f2f2f2;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+
+}
+
+.asideBar a:hover {
+    background-color: #ddd;
+}
+
+.logo{
+    display: none;
+}
 .productos{
     grid-area: productos;
   padding-top: 1%;
@@ -81,15 +107,26 @@ aside{
     border-radius: 50px;
     border: 1px solid #212431;
     margin: 5%;
+    
 
 }
+
+
 
 .img {
     width:  80%; 
     max-width: 300px; 
     height: auto;
     border-radius: 5%;
+    transition: transform 0.3s ease-in-out;
+    border: 1px solid black;
+   
 }
+.img:hover {
+    transform: scale(1.5); /* Puedes ajustar el valor según qué tan grande quieras que sea la imagen al pasar el mouse */
+  }
+
+
 
 .paginador{
     grid-area: paginador;
@@ -125,6 +162,13 @@ footer {
     width: 100%;
 }
 
+.redes-sociales a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 20px;
+  }
+
 .productos .producto:not(:first-child) {
     display: none;
 }
@@ -153,25 +197,18 @@ aside{
     margin-top: 2em;
 }
 
+.asideBar {
+    display: flex;
+    flex-direction: column;
+
+}
 .asideBar li {
     margin-top: 10%;
     margin-bottom: 30%;
 
 }
 
-.asideBar a {
-    text-decoration: none;
-    padding: 5%;
-    background-color: #f2f2f2;
-    color: #333;
-    border: 1px solid #ddd;
-    border-radius: 4px;
 
-}
-
-.asideBar a:hover {
-    background-color: #ddd;
-}
 
 .productos .producto:not(:first-child) {
     display: flex; 
@@ -202,7 +239,13 @@ aside{
     background-color: #ddd;
 }
 
+.logo{
+    display: block;
 }
+
+
+}
+
 
 
 
