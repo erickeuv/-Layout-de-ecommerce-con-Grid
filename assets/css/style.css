@@ -1,3 +1,5 @@
+
+
 body{
     display: grid;
     grid-template-columns: auto;
@@ -10,8 +12,9 @@ body{
     "footer";
     margin: 0;
     padding: 0;
-    font-family: "Open Sans", sans-serif;
-    min-height: 100vh;    
+    font-family: "Montserrat", sans-serif;
+    min-height: 100vh;   
+    width: 100%; 
 }
 
 .bold{
@@ -22,13 +25,17 @@ body{
 
 nav{
     grid-area: header;
+    display:flex;
+    flex-direction: column;
     text-align: center;
-    background-color:  #195B8D;
+    background-color: #096691;
     color: white;
     font-size: 150%;
     padding: 1%;
     font-weight: 700;
-   
+   justify-content: center;
+   height: 80px;
+ 
 }
 
 .searchBar{
@@ -37,7 +44,8 @@ nav{
     background-color: whitesmoke;
     color: #212431;
     padding-bottom: 1%;
-    padding: 5px; /* Ajusta el espacio interno según tus necesidades */
+    padding: 5px; 
+
  
     
 }
@@ -79,7 +87,7 @@ aside{
 }
 
 .asideBar a:hover {
-    background-color: #ddd;
+    background-color: #519bc9;
 }
 
 .logo{
@@ -90,6 +98,7 @@ aside{
   padding-top: 1%;
   padding-bottom: 1%;
     justify-self: center;
+
     
 }
 
@@ -99,11 +108,11 @@ aside{
     width: 80%;
     max-width: 400px;
     height: 400px;
-    background-color: #195B8D;
+    background-color: #096691;
     color: white;
     text-align: center;
     align-items: center; 
-    justify-content: center; 
+    justify-content: space-evenly; 
     border-radius: 50px;
     border: 1px solid #212431;
     margin: 5%;
@@ -194,7 +203,8 @@ aside{
     display: flex;
     flex-direction: column;
     text-align: left;
-    margin-top: 2em;
+   padding-top: 2em;
+
 }
 
 .asideBar {
@@ -216,7 +226,7 @@ aside{
 
 
 .productos{
-    grid-area: productos;
+  
     display: grid;
     grid-template-columns: auto auto auto auto;
 }
@@ -241,9 +251,12 @@ aside{
 
 .logo{
     display: block;
+    transition: transform 0.5s ease-in-out;
 }
+.logo:hover {
+    transform: rotate(360deg);
 
-
+}
 }
 
 
