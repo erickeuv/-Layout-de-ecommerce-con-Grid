@@ -132,7 +132,7 @@ aside{
    
 }
 .img:hover {
-    transform: scale(1.5); /* Puedes ajustar el valor según qué tan grande quieras que sea la imagen al pasar el mouse */
+    transform: scale(1.9); /* Puedes ajustar el valor según qué tan grande quieras que sea la imagen al pasar el mouse */
   }
 
 
